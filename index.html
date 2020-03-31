@@ -1,147 +1,59 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>The Canvas Tag</title>
-  </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV: Apisith</title>
+</head>
+<body>
+  <center>
+<h1>Apisith Wongsorn</h1>
+<h3>2nd Year Student</h3>
+<p>of Computer Science, Faculty of Science and Technology,
+Thammasat University (Lampang Campus), Lampang, Thailand 52190</p> 
+  +66(0)625068131<br/>
+  apisith.won@dome.tu.ac.th<br/>
+  soycoder<br/>
+</center>
+<h2>EDUCATION</h2>
+August 2018 - Present 
+(Expected Graduation : May 2022)
+	Bachelor of Science in Computer Science, Thammasat University, Thailand.
+<br/>
+May 2012 - March 2018
+	Gifted Science and Mathematics Program (GSMP), 
+Chomthong School, Thailand.
+<br/>
 
-  <body>
-    <header>
-      <p>Press TAB to begin, W, A, S, D keys to move</p>
-    </header>
-    <section style="border-style: solid; border-width: 2px; width: 500px;">
-      <canvas width="500" height="500" id="canvas_1" tabindex="0">
-        Canvas tag not supported
-      </canvas>
-    </section>
+<h2>UNDERGRADUATE ACTIVITIES</h2>
+<h4>Software Contests</h4>
+<li>	Thailand National Software Contest (NSC) 2020
+English War Platform: Learning English online with gamification (Passed to the northern region round)
+<li>	Thailand National Software Contest (NSC) 2019
+Bed control system for physical therapy of paralysis patient (Passed to the northern region round)
+<h4>Training</h4>
+<li>	MODDANG: Boot Camp, Real-World Data Science Challenges, Thailand, 2020.
+SMIT: Social Media Investigation Tool
+<li>	Raspberry Pi Programming for Investigation, August 2019.
+Practiced the IoT using Raspberry Pi for Investigation.
+<li>	MODDANG: Boot Camp, Real-World Data Science Challenges, Thailand, 2018.
+Trust checking Tool for loan approved from information on Social Media.
+<li>	Bridge 2 inventor challenge 10th For Sport, Thailand, 2017.
+Practice using a microcontroller named "NodeMCU” develop a cleaner controlled remotely by the smartphone with Blynk. 
+<li>	i-Tim7th (i-Tim: Inventions Program 7th), 2015.
+Practiced the GoGo Board v5, its built Wi-Fi Car and show a data from a sensor on web page with a graph via wireless.
+<li>	i-Tim Robotics Camp 4th (robotics training), 2012.
+Practiced the Raspberry Pi with GoGo Board v3 (Pi Topping).
+<h4>Competition</h4>
+<li>	The 2019 ICPC Asia Bangkok Programming Contest, at (ENG) Chulalongkorn University.
+<li>	The 2018 ICPC Asia Bangkok Programming Contest, at (ICT) Mahidol University.
+<li>	Thailand Student Arts and Crafts Competition, 2017
+Line Follower & Obstacle Detector Robot 
+(1st of the northern region round and 9th of the final round)
 
-    <script>
-      var canvas = document.getElementById("canvas_1");
-      canvas.addEventListener("keydown", doKeyMove, true);
+<h2>PUBLICATIONS</h2>
+<h4>CONFERENCE PAPERS</h4>
+<li>	A. Wongsorn, K. Srijiranon, and N. Eiamkanitchat, “Application of IoT Using Neuro-fuzzy Based on Thai Speech Classification to Control Model Hospital Bed with Arduino,” in proceeding of 2019 IEEE 8th Global Conference on Consumer Electronics (GCCE), Osaka, Japan, October 2019.
 
-      canvas_context = canvas.getContext("2d");
-      canvas_context.fillRect(0, 450, 50, 50);
-      drawMaps();
-      var x = 0;
-      var y = 450;
-
-      function doKeyMove(e) {
-        //====================
-        //	THE W KEY
-        //====================
-        if (e.keyCode == 87) {
-          clearCanvas();
-          drawMaps();
-          y = y - 50;
-          if (y < 0) {
-            y = 0;
-          }
-          canvas_context.fillRect(x, y, 50, 50);
-        }
-
-        //====================
-        //	THE S KEY
-        //====================
-        if (e.keyCode == 83) {
-          clearCanvas();
-          drawMaps();
-          y = y + 50;
-          if (y > 450) {
-            y = 450;
-          }
-          canvas_context.fillRect(x, y, 50, 50);
-        }
-
-        //====================
-        //	THE A KEY
-        //====================
-        if (e.keyCode == 65) {
-          clearCanvas();
-          drawMaps();
-          x = x - 50;
-          if (x < 0) {
-            x = 0;
-          }
-          canvas_context.fillRect(x, y, 50, 50);
-        }
-
-        //====================
-        //	THE D KEY
-        //====================
-        if (e.keyCode == 68) {
-          clearCanvas();
-          drawMaps();
-          x = x + 50;
-          if (x > 450) {
-            x = 450;
-          }
-          canvas_context.fillRect(x, y, 50, 50);
-        }
-      }
-
-      function clearCanvas() {
-        canvas.width = canvas.width;
-      }
-
-      function drawMaps() {
-        canvas_context.beginPath();
-        var i = 1;
-        canvas_context.moveTo(0, i * 50);
-        canvas_context.lineTo(500, i * 50);
-        var i = 2;
-        canvas_context.moveTo(0, i * 50);
-        canvas_context.lineTo(500, i * 50);
-        var i = 3;
-        canvas_context.moveTo(0, i * 50);
-        canvas_context.lineTo(500, i * 50);
-        var i = 4;
-        canvas_context.moveTo(0, i * 50);
-        canvas_context.lineTo(500, i * 50);
-        var i = 5;
-        canvas_context.moveTo(0, i * 50);
-        canvas_context.lineTo(500, i * 50);
-        var i = 6;
-        canvas_context.moveTo(0, i * 50);
-        canvas_context.lineTo(500, i * 50);
-        var i = 7;
-        canvas_context.moveTo(0, i * 50);
-        canvas_context.lineTo(500, i * 50);
-        var i = 8;
-        canvas_context.moveTo(0, i * 50);
-        canvas_context.lineTo(500, i * 50);
-        var i = 9;
-        canvas_context.moveTo(0, i * 50);
-        canvas_context.lineTo(500, i * 50);
-
-        var i = 1;
-        canvas_context.moveTo(i * 50, 0);
-        canvas_context.lineTo(i * 50, 500);
-        var i = 2;
-        canvas_context.moveTo(i * 50, 0);
-        canvas_context.lineTo(i * 50, 500);
-        var i = 3;
-        canvas_context.moveTo(i * 50, 0);
-        canvas_context.lineTo(i * 50, 500);
-        var i = 4;
-        canvas_context.moveTo(i * 50, 0);
-        canvas_context.lineTo(i * 50, 500);
-        var i = 5;
-        canvas_context.moveTo(i * 50, 0);
-        canvas_context.lineTo(i * 50, 500);
-        var i = 6;
-        canvas_context.moveTo(i * 50, 0);
-        canvas_context.lineTo(i * 50, 500);
-        var i = 7;
-        canvas_context.moveTo(i * 50, 0);
-        canvas_context.lineTo(i * 50, 500);
-        var i = 8;
-        canvas_context.moveTo(i * 50, 0);
-        canvas_context.lineTo(i * 50, 500);
-        var i = 9;
-        canvas_context.moveTo(i * 50, 0);
-        canvas_context.lineTo(i * 50, 500);
-
-        canvas_context.stroke();
-      }
-    </script>
-  </body>
+</body>
 </html>
