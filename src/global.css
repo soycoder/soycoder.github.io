@@ -3,9 +3,9 @@
 
 :root {
 	--main-color: #fff;
-	--secondary-color: #949CA8;
+	--secondary-color: #949ca8;
 	--bg-color: #111827;
-	--bg-secondary-color: #1F2937;
+	--bg-secondary-color: #1f2937;
 	--heading-color: #fff;
 	--accent-color: #e7e7e7ba;
 	--link-color: #0076df;
@@ -84,4 +84,23 @@ ul {
 
 ul li {
 	font-size: 1rem;
+}
+
+::-webkit-scrollbar {
+	width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: var(--bg-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: var(--bg-secondary-color);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
 }

@@ -1,12 +1,12 @@
 {
-  "name": "soycoder.github.io",
-  "version": "0.1.0",
-  "private": true,
-  "engines" : { 
-    "npm" : ">=8.0.0",
-    "node" : ">=16.15.0"
-  },
-  "scripts": {
+	"name": "soycoder.github.io",
+	"version": "0.1.0",
+	"private": true,
+	"engines": {
+		"npm": ">=8.0.0",
+		"node": ">=16.15.0"
+	},
+	"scripts": {
 		"dev": "svelte-kit dev",
 		"build": "svelte-kit build",
 		"package": "svelte-kit package",
