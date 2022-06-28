@@ -1,42 +1,72 @@
 {
-  "name": "soycoder.github.io",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.3.0",
-    "@testing-library/user-event": "^13.5.0",
-    "firebase": "^9.8.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "reactfire": "^4.2.1",
-    "tslib": "^2.1.0",
-    "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {}
+	"name": "soycoder.github.io",
+	"version": "0.1.0",
+	"private": true,
+	"engines": {
+		"npm": ">=8.0.0",
+		"node": ">=16.15.0"
+	},
+	"scripts": {
+		"dev": "svelte-kit dev",
+		"build": "svelte-kit build",
+		"package": "svelte-kit package",
+		"preview": "svelte-kit preview",
+		"prepare": "svelte-kit sync",
+		"test": "playwright test",
+		"jest": "jest lib/components/__tests__",
+		"check": "svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
+		"lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
+		"format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
+	},
+	"devDependencies": {
+		"@babel/core": "^7.17.8",
+		"@babel/preset-env": "^7.16.11",
+		"@babel/preset-typescript": "^7.16.7",
+		"@playwright/test": "^1.20.0",
+		"@sveltejs/adapter-vercel": "next",
+		"@sveltejs/kit": "next",
+		"@testing-library/jest-dom": "^5.16.3",
+		"@testing-library/svelte": "^3.1.0",
+		"@types/jest": "^27.4.1",
+		"@typescript-eslint/eslint-plugin": "^5.10.1",
+		"@typescript-eslint/parser": "^5.10.1",
+		"eslint": "^7.32.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-svelte3": "^3.2.1",
+		"jest": "^27.5.1",
+		"prettier": "^2.5.1",
+		"prettier-plugin-svelte": "^2.5.0",
+		"svelte": "^3.44.0",
+		"svelte-check": "^2.2.6",
+		"svelte-jester": "^2.3.2",
+		"svelte-preprocess": "^4.10.1",
+		"svelte2tsx": "^0.5.6",
+		"ts-jest": "^27.1.4",
+		"tslib": "^2.3.1",
+		"typescript": "~4.6.2"
+	},
+	"jest": {
+		"transform": {
+			"^.+\\.js$": "babel-jest",
+			"^.+\\.ts$": "ts-jest",
+			"^.+\\.svelte$": [
+				"svelte-jester",
+				{
+					"preprocess": true
+				}
+			]
+		},
+		"moduleFileExtensions": [
+			"js",
+			"ts",
+			"svelte"
+		],
+		"testPathIgnorePatterns": [
+			"__testMocks__"
+		],
+		"testEnvironment": "jsdom",
+		"preset": "ts-jest"
+	},
+	"type": "module"
 }
